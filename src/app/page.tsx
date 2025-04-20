@@ -28,7 +28,7 @@ export default function Home() {
       <h1 className="text-2xl font-bold mb-4">Fruit & Vegetable Todo List</h1>
       <CreateForm />
       <div className="flex gap-4">
-        <Column title="" items={mainList} onItemClick={handleMainClick} />
+        <Column title="All Items" items={mainList} onItemClick={handleMainClick} />
         <Column title="Fruits" items={fruits} onItemClick={handleColumnClick} />
         <Column title="Vegetables" items={vegetables} onItemClick={handleColumnClick} />
       </div>

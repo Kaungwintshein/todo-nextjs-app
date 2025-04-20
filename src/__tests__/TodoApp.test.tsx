@@ -43,7 +43,7 @@ describe('Todo List App', () => {
   //     jest.advanceTimersByTime(5000);
   //   });
 
-  //   const mainList = screen.getByText('Main List');
+  //   const mainList = screen.getByText('All Items');
   //   expect(mainList.parentElement).toHaveTextContent('Apple');
   // });
 
@@ -64,15 +64,15 @@ describe('Todo List App', () => {
     expect(within(fruitColumn).queryByText('Apple')).not.toBeInTheDocument();
   });
 
-  // it('clicking on column item returns it to main list immediately', () => {
-  //   fireEvent.change(screen.getByPlaceholderText('Item name'), { target: { value: 'Banana' } });
-  //   fireEvent.click(screen.getByText('Add'));
-  //   fireEvent.click(screen.getByText('Banana'));
+  it('clicking on column item returns it to All Items immediately', () => {
+    fireEvent.change(screen.getByPlaceholderText('Item name'), { target: { value: 'Banana' } });
+    fireEvent.click(screen.getByText('Add'));
+    fireEvent.click(screen.getByText('Banana'));
 
-  //   const btn = screen.getByText('Banana');
-  //   fireEvent.click(btn);
+    const btn = screen.getByText('Banana');
+    fireEvent.click(btn);
 
-  //   const mainList = screen.getByText('Main List');
-  //   expect(mainList.parentElement).toHaveTextContent('Banana');
-  // });
+    const mainList = screen.getByText('All Items');
+    expect(mainList.parentElement).toHaveTextContent('Banana');
+  });
 });
