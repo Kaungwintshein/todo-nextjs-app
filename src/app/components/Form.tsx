@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Item, ItemType } from '../../types';
+import { ItemType } from '../../types';
 import useItemStore from '../../store/itemStore';
 
 export default function Form() {
